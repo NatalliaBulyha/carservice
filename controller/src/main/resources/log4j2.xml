@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="warn" monitorInterval="60">
+
+<appenders>
+<file name="file" fileName="hibernateSQL.log">
+    <patternLayout pattern="%d{yyyy-MMM-dd HH:mm:ss a} [%t] %-5level %logger{36} - %msg%n" />
+</file>
+<file name="file2" fileName="hibernateExc.log">
+    <patternLayout pattern="%d{yyyy-MMM-dd HH:mm:ss a} [%t] %-5level %logger{36} - %msg%n" />
+</file>
+    <console name="console" target="SYSTEM_OUT">
+        <patternLayout
+                pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+    </console>
+</appenders>
+
+    <loggers>
+        <logger name="org.hibernate.sql" level="debug" additivity="false">
+        <appender-ref ref="file" />
+    </logger>
+        <logger name="org.hibernate.type.descriptor.sql" level="trace" additivity="false">
+            <appender-ref ref="file" />
+        </logger>
+        <logger name="by.senla.training.bulyha.carservice.controller" level="error">
+            <appender-ref ref="file2" />
+        </logger>
+        <logger name="org.springframework" level="debug">
+            <appender-ref ref="console" />
+        </logger>
+    </loggers>
+</configuration>
+

@@ -1,0 +1,1 @@
+java -jar bulyha-natallia.jar
