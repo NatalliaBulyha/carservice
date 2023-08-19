@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This is Maven multi-module project that simulates application for car service. 
+This is my first Maven multi-module project that simulates application for car service. 
 
 This is a training project as part of study in the Software Engineering Laboratory Senla.
 
